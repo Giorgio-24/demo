@@ -19,6 +19,12 @@ public abstract class AbstractController<DTO> {
     @Autowired
     private ServiceDTO<DTO> service;
 
+    // ^L'interfaccia Iterable serve per fare i cicli for su questo oggetto.
+    /*
+     * Non è fondamentale per far si che si possa ciclare su un oggetto, ma rende il
+     * codice più chiaro, più veloce da scrivere e meno incline agli errori.
+     */
+
     @GetMapping("/getall")
     public Iterable<DTO> getAll() {
         return service.getAll();
