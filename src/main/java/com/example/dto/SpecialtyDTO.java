@@ -11,11 +11,9 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
 
-public class ClinicDTO {
+public class SpecialtyDTO {
 
     private Long id;
 
-    private String address;
-
-    private String description;
+    private String name;
 }
