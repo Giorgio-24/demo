@@ -12,7 +12,7 @@ import com.example.model.Clinic;
 
 @Component
 public class DoctorConverter extends AbstractConverter<Doctor, DoctorDTO> {
-
+    // ^SE SI HANNO TABELLE ESTERNE CON CUI ABBIAMO RELAZIONI METTO @AUTOWIRED
     @Autowired
     SpecialtyConverter specialtyConverter;
     @Autowired
