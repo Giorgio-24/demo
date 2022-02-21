@@ -23,6 +23,13 @@ public class Doctor {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column
+    private String npi;
+
+    private String first_name;
+
+    private String last_name;
+
     // ^DEFINISCO LA RELAZIONE CON LE ALTRE TABELLE, E SPECIFICO A
     // ^QUALE DELLE SUE COLONNE FA RIFERIMENTO.
     @ManyToOne
@@ -30,13 +37,7 @@ public class Doctor {
     private Specialty specialty;
 
     @ManyToOne
-    @JoinColumn(name = "doc_clinic_id")
+    @JoinColumn(name = "doc_clinic_id", referencedColumnName = "id")
     private Clinic clinic;
-
-    private String npi;
-
-    private String first_name;
-
-    private String last_name;
 
 }
