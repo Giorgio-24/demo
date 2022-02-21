@@ -6,11 +6,14 @@ import com.example.dto.UserDTO;
 
 import com.example.model.User;
 
+//^ @COMPONENT SI METTE NEI CONVERTER.
 @Component
 public class UserConverter extends AbstractConverter<User, UserDTO> {
 
     @Override
     public User toEntity(UserDTO userDTO) {
+
+        // ^CREA UN NUOVO USER E CON I SETTERS RIEMPIE I SUOI CAMPI CON QUELLI DEL DTO.
         User user = null;
         if (userDTO != null) {
             user = new User(userDTO.getId(), userDTO.getFirst_name(), userDTO.getLast_name(), userDTO.getUsertype(),
